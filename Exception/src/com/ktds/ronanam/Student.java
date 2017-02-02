@@ -16,10 +16,23 @@ public class Student {
 		// }
 
 		// (1.6이하)
+//		try {
+//			registNewStudent();
+//		} catch (MissmatchValueException e) {
+//			e.printStackTrace();
+//		} finally{
+//			//try, catch가 끝나면 여기로 오게 되어 있다.
+//			//즉, 마무리작업을 써주면 된다.
+//			System.out.println("잘 처리 되었습니다.");
+//		}
+		
+		//예외가 던져지기 전에 이것만큼은 해주고 던져줘~!
 		try {
 			registNewStudent();
-		} catch (MissmatchValueException e) {
-			e.printStackTrace();
+		} finally{
+			//try, catch가 끝나면 여기로 오게 되어 있다.
+			//즉, 마무리작업을 써주면 된다.
+			System.out.println("잘 처리 되었습니다.");
 		}
 //		} catch (MissingValueException e) {
 //			// TODO Auto-generated catch block
